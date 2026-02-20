@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <style>
+            body {
+                background: lightskyblue;
+            }
+            button {
+                background: greenyellow;
+                color: white;
+                padding: 20px;
+                margin-bottom: 10px;
+                border: solid 12px darkgreen;
+                border-radius: 20px;
+            }
+            button:hover {
+                padding: 30px;
+                border-color: lightGreen;
+                font-size: 19px;
+                font-weight: bold;
+                font-style: italic;
+            }
+            button:active {
+                background: green;
+                border-color: yellow;
+            }
+            p {
+                color: brown;
+                font-size: 40px;
+            }
+            p:hover {
+                color:darkblue;
+            }
+            p:active {
+                background: white;
+            }
+        </style>
+    </head>
+    <button onclick="add()">Add to a counter</button>
+    <button onclick="sub()">Decrease Counter</button>
+    <button onclick="reset()">Reset Counter</button>
+    <p id="es">Click the button first</p>
+    <script>
+        let b = 0
+        function add() {
+            let a = document.querySelector("p")
+            b++
+            a.innerHTML = `You clicked ${b} times`
+        }
+        function sub() {
+            let a = document.querySelector("p")
+            b--
+            a.innerHTML = `You clicked ${b} times`
+        }
+        function reset() {
+            let a = document.querySelector("p")
+            b = 0
+            a.innerHTML = `You clicked ${b} times`
+        }
+    </script>
+</html>
